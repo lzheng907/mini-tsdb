@@ -1,0 +1,26 @@
+# CMake and compiler output
+/build/
+/build-*/
+/CMakeFiles/
+/CMakeCache.txt
+/cmake_install.cmake
+/Makefile
+/Testing/
+
+# Generated database and benchmark data
+/bench_data/
+/demo_data/
+/test_data/
+*.sst
+*.log
+wal.log*
+CURRENT
+MANIFEST*
+
+# Editor and OS files
+.vscode/
+.idea/
+*.user
+*.suo
+.DS_Store
+Thumbs.db
