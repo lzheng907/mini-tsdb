@@ -2,8 +2,6 @@
 
 > 基于 C++17 实现的轻量级时序存储引擎：LSM-tree 写入路径、WAL 持久化、SSTable 查询与后台 Compaction。
 
-[![CI](https://github.com/lzheng907/mini-tsdb/actions/workflows/ci.yml/badge.svg)](https://github.com/lzheng907/mini-tsdb/actions/workflows/ci.yml)
-
 ## 项目概览
 
 `mini-tsdb` 面向 `(measurement, timestamp)` 时序键，聚焦存储引擎的核心读写路径与可靠性机制。项目以单机、单进程原型为定位，实现了从写入、持久化、查询到恢复和后台压缩的完整闭环。
