@@ -12,13 +12,13 @@
 
 ```mermaid
 flowchart LR
-    W[Put / Delete / WriteBatch] --> WAL[WAL + CRC]
-    WAL --> MT[Mutable MemTable (SkipList)]
-    MT -->|达到阈值| IM[Immutable MemTable]
-    IM -->|后台 Flush| L0[L0 SSTable]
-    L0 -->|后台 Compaction| L1[L1+ SSTable]
+    W["Put / Delete / WriteBatch"] --> WAL["WAL + CRC"]
+    WAL --> MT["Mutable MemTable (SkipList)"]
+    MT -->|达到阈值| IM["Immutable MemTable"]
+    IM -->|后台 Flush| L0["L0 SSTable"]
+    L0 -->|后台 Compaction| L1["L1+ SSTable"]
 
-    R[Get / RangeQuery] --> MT
+    R["Get / RangeQuery"] --> MT
     R --> IM
     R --> BF[Bloom Filter]
     BF --> BC[Block Cache]
